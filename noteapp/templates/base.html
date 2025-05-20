@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Note App{% endblock %}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen font-sans">
+    <header class="bg-indigo-600 text-white p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-semibold tracking-tight"><a href="{% url 'note_list' %}" class="hover:text-indigo-100 transition duration-150 ease-in-out">Note App</a></h1>
+            <nav>
+                <a href="{% url 'note_create' %}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow hover:shadow-md transition duration-150 ease-in-out">
+                    New Note
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 mt-6 bg-white rounded-lg shadow-md">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="text-center p-6 mt-10 text-gray-500 text-sm">
+        <div class="container mx-auto">
+            
+        </div>
+    </footer>
+</body>
+</html> 

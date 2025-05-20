@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+
+    <h1 class="text-3xl font-semibold tracking-tight text-gray-800 mb-6 pb-4 border-b border-gray-200">Confirm Deletion</h1>
+    
+    <p class="mb-6 text-lg text-gray-700">Are you sure you want to delete the note "<span class="font-semibold text-indigo-600">{{ note.title }}</span>"?</p>
+    
+    <form method="post" class="flex justify-start space-x-3">
+        {% csrf_token %}
+        <button type="submit" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg shadow-sm hover:shadow-md transition duration-150 ease-in-out">
+            Yes, Delete
+        </button>
+        <a href="{% url 'note_detail' note.pk %}" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg shadow-sm hover:shadow transition duration-150 ease-in-out">
+            Cancel
+        </a>
+    </form>
+
+{% endblock %} 
