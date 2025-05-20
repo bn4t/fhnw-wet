@@ -30,6 +30,26 @@ A simple note-taking application built with Django and Tailwind CSS. Users can c
 - Use the "New Note" button to create a new note
 - Edit or delete notes from their detail page
 
+## Running with Docker
+
+To build and run this application using Docker, follow these steps:
+
+1.  **Build the Docker image:**
+    ```bash
+    docker build -t noteapp .
+    ```
+
+2.  **Run the Docker container:**
+    ```bash
+    docker run -p 8000:8000 noteapp
+    ```
+    This will start the Django development server inside the container, accessible at `http://localhost:8000` on your host machine.
+
+    To run the container in detached mode (in the background), use the `-d` flag:
+    ```bash
+    docker run -d -p 8000:8000 noteapp
+    ```
+
 ## Technologies
 
 - Django
