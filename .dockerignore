@@ -1,0 +1,16 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+pip-cache/
+venv/
+*.env
+
+# Django
+db.sqlite3
+*.log
